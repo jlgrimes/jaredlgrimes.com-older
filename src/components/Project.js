@@ -1,21 +1,24 @@
 import React from 'react';
+import { Card, Image } from 'semantic-ui-react';
+import Img from 'gatsby-image';
 
 function Project({ project }) {
-    console.log(project)
     const { frontmatter, html } = project;
 
+    let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid;
+
     return (
-        <div className="blog-post-container">
-            <div className="blog-post">
-                <h1>{frontmatter.title}</h1>
-                <h2>{frontmatter.date}</h2>
-                <h2>{frontmatter.description}</h2>
-                <div
-                    className="blog-post-content"
-                    dangerouslySetInnerHTML={{ __html: html }}
-                />
-            </div>
-        </div>
+        <Card>
+            <Img fluid={featuredImgFluid} />
+            <Card.Content>
+                <Card.Header>{frontmatter.title}</Card.Header>
+                <Card.Meta>{frontmatter.date}</Card.Meta>
+                <Card.Meta>{frontmatter.description}</Card.Meta>
+                <Card.Description>
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                </Card.Description>
+            </Card.Content>
+        </Card>
     );
 }
 

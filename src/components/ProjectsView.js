@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
+import { Card } from 'semantic-ui-react';
 import { Project } from './Project';
 
 function ProjectsView({ projects }) {
     return (
-        <Fragment>
+        <Card.Group>
             {projects.map(project => (
                 <Project project={project} />
             ))}
-        </Fragment>
+        </Card.Group>
     );
 }
 
