@@ -4,7 +4,7 @@ import { Project } from './Project';
 
 function ProjectsView({ projects }) {
     return (
-        <Card.Group>
+        <Card.Group centered itemsPerRow={2}>
             {projects.map(project => (
                 <Project project={project} />
             ))}
