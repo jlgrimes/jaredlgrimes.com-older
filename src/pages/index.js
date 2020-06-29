@@ -2,8 +2,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 import React, { Fragment } from 'react';
 import { Container, Segment } from 'semantic-ui-react';
-import { ProjectsView } from '../components/ProjectsView';
-import { IntroView } from '../components/IntroView';
+import { ProjectsView, IntroView, ExperienceView } from '../components';
 
 export default function Home({ data }) {
     // the map is to get the actual node from each edge
@@ -13,11 +12,18 @@ export default function Home({ data }) {
         node => node.fileAbsolutePath.indexOf(`projects`) > 0
     );
 
+    const experiences = nodes.filter(
+        node =>
+            node.fileAbsolutePath.indexOf(`work`) > 0 ||
+            node.fileAbsolutePath.indexOf(`education`) > 0
+    );
+
     return (
         <div>
             <Container>
                 <IntroView />
                 <ProjectsView projects={projects} />
+                <ExperienceView experiences={experiences} />
             </Container>
         </div>
     );
@@ -25,13 +31,14 @@ export default function Home({ data }) {
 
 export const pageQuery = graphql`
     query {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
             edges {
                 node {
                     html
                     fileAbsolutePath
                     frontmatter {
                         title
+                        subtitle
                         featuredImage {
                             childImageSharp {
                                 fluid(maxWidth: 800) {
@@ -39,7 +46,7 @@ export const pageQuery = graphql`
                                 }
                             }
                         }
-                        date(formatString: "MMMM DD, YYYY")
+                        date(formatString: "MMMM YYYY")
                         description
                         slug
                     }
