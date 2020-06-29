@@ -1,6 +1,6 @@
 ---
 title: "BSE in Computer Science"
-featuredImage: ../images/projects/ebook-reader.png
+featuredImage: ../images/experience/umich.jpg
 subtitle: "University of Michigan"
 date: "2020-05-03"
 description: "Minors in Mathematics and Music"

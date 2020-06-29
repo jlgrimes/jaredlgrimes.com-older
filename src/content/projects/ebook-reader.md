@@ -1,10 +1,8 @@
 ---
-title: "DLM Ebook Reader"
+title: "Directed Listening Model Ebook Reader"
 featuredImage: ../images/projects/ebook-reader.png
 subtitle: "Full stack web app made in AWS"
 date: "2020-04-20"
-description: "jdpas project"
+description: "Ebook reader for Directed Listening Model – a book that clarifies the craftsmanship of ensemble music."
 slug: "/projects/ebook-reader"
 ---
-
-Nice ebook reader app for the web

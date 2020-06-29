@@ -1,6 +1,6 @@
 ---
 title: "Software Development Engineer Intern"
-featuredImage: ../images/projects/ebook-reader.png
+featuredImage: ../images/experience/amazon.png
 subtitle: "Amazon"
 date: "2019-06-03"
 description: "New York, New York"

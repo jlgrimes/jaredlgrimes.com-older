@@ -1,6 +1,6 @@
 ---
 title: "Web Developer"
-featuredImage: ../images/projects/ebook-reader.png
+featuredImage: ../images/experience/umich.jpg
 subtitle: "University of Michigan CAEN"
 date: "2019-09-01"
 description: "Ann Arbor, Michigan"

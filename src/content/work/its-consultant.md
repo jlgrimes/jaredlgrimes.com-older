@@ -1,6 +1,6 @@
 ---
 title: "4HELP Computer Consultant"
-featuredImage: ../images/projects/ebook-reader.png
+featuredImage: ../images/experience/umich.jpg
 subtitle: "University of Michigan ITS"
 date: "2017-09-01"
 description: "Ann Arbor, Michigan"

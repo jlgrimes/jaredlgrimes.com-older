@@ -4,6 +4,10 @@ import { Card, Image, Reveal } from 'semantic-ui-react';
 import Img from 'gatsby-image';
 import { css, jsx } from '@emotion/core';
 
+const ProjectStyles = css`
+    width: 30em !important;
+`
+
 const ProjectOverlayStyles = css`
     z-index: 10;
     position: absolute;
@@ -40,7 +44,7 @@ function Project({ project }) {
     let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid;
 
     return (
-        <Card link href={frontmatter.slug}>
+        <Card css={ProjectStyles} link href={frontmatter.slug}>
             <a className="overlay" css={ProjectOverlayStyles}>
                 <div css={ProjectOverlayTextStyles}>
                     <Card.Content>

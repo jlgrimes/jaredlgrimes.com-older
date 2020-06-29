@@ -1,6 +1,6 @@
 ---
 title: "Software Development Engineer"
-featuredImage: ../images/projects/ebook-reader.png
+featuredImage: ../images/experience/amazon.png
 subtitle: "Amazon"
 date: "2020-09-14"
 description: "New York, New York"
